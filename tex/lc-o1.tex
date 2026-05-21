@@ -1,0 +1,360 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{doi}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\Meff}{M_{\mathrm{eff}}}
+
+\title{Lorentz Transformations from Projective Temporal Ordering\\[4pt]
+\normalsize\itshape LC-O1 of the Lorentz--Capacity Sub-Programme}
+\author{J\'er\^ome Beau\\[2pt]
+\small Independent Researcher\\
+\small \texttt{jerome.beau@cosmochrony.org}}
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    We close LC-O1, the reconstruction of effective Lorentz transformations between
+    inertial observers from projective temporal ordering data.
+    The Lorentz-capacity construction of~\cite{Beau2026n,Beau2026tp} establishes that
+    the projective temporal capacity satisfies
+    \[
+      F^\tau = \sqrt{1-\beta^2} = \frac{1}{\gamma},
+    \]
+    where $\beta$ is the normalised spatial capacity load and $\gamma$ is the Lorentz
+    factor, closing time dilation and the light cone.
+    The remaining open problem is the reconstruction of the full observer transformation,
+    including length contraction.
+    We prove that an inertial observer corresponds to a unit timelike splitting of the
+    completed effective co-metric $g^{\mu\nu}=2\eta^{\mu\nu}$ established in
+    Q5b--Q11~\cite{Beau2026q5b,Beau2026q11}.
+    Given two such splittings with relative capacity load $\beta$, the unique proper
+    orthochronous isometry of the reconstructed flat interval that maps one temporal axis
+    to the other is the standard Lorentz boost
+    \[
+      \Lambda(\beta)
+      =
+      \begin{pmatrix}
+        \gamma & -\gamma\beta \\
+        -\gamma\beta & \gamma
+      \end{pmatrix}.
+    \]
+    Length contraction follows as the reciprocal spatial projection onto the simultaneity
+    hyperplane of the moving splitting:
+    \[
+      \ell = \frac{\ell_0}{\gamma}.
+    \]
+    The Born--Infeld capacity sphere parameterises admissible capacity splittings and is
+    not a Lorentzian structure; the Lorentz group acts as the isometry group of the
+    effective metric $\eta$, not of the BI sphere.
+    Special-relativistic observer transformations are thereby reconstructed from the same
+    capacity data that produced projective time dilation.
+  \end{abstract}
+
+  \medskip
+  \noindent\textbf{Keywords.}
+  Lorentz transformation; length contraction; inertial splitting; projective temporal
+  ordering; Born--Infeld capacity sphere; effective Lorentzian metric; Cosmochrony.
+  \enlargethispage{1\baselineskip}
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+  \section{Introduction}
+    \label{sec:introduction}
+
+    The Lorentz-capacity sub-programme derives relativistic kinematics from the bounded
+    Born--Infeld capacity budget of admissible projection on
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
+    Paper~\cite{Beau2026n} identifies the projective temporal capacity $F^\tau = \sqrt{1-B^2}$
+    as the Lorentz factor residual, and~\cite{Beau2026tp} proves that the temporal residual map
+    \[
+      P^{Q5b}_\tau \Sigma^{\mathrm{tot}}_n = \sqrt{1-B_n^2}
+    \]
+    is the unique positive function compatible with the Lorentzian splitting of Q5b--Q11,
+    the Born--Infeld unit capacity sphere, and the Weil filling law.
+    This closes time dilation ($d\tau/dn = 1/\gamma$) and the light cone ($B = 1
+  \Rightarrow F^\tau = 0$).
+
+    The open problem LC-O1 is stated in Section~7.2 of~\cite{Beau2026tp}:
+    length contraction requires the reconstruction of effective Lorentz transformations
+    between inertial observers from projective temporal ordering data.
+
+    The resolution rests on a strict separation of two structures.
+    The Born--Infeld capacity sphere
+    \[
+      (F^\tau)^2 + \beta^2 = 1
+    \]
+    is a Euclidean capacity relation.
+    It parameterises admissible temporal splittings and determines $\beta$ and $1/\gamma$,
+    but it is not the Minkowski interval.
+    The Lorentzian metric is supplied by the homogeneous Q5b--Q11 closure:
+    \[
+      g^{\mu\nu} = 2\eta^{\mu\nu}.
+    \]
+    Lorentz transformations are the isometries of $\eta$, not symmetries of the BI sphere.
+    The BI sphere determines which splittings are admissible; the Lorentz group determines
+    how to pass between them.
+
+    Section~\ref{sec:splittings} defines inertial observers as unit timelike splittings of
+    the effective metric and identifies the rapidity with the projective capacity load.
+    Section~\ref{sec:boost} proves that the unique interval-preserving isometry mapping
+    one splitting to another is the Lorentz boost.
+    Section~\ref{sec:contraction} derives length contraction.
+    Section~\ref{sec:pto} states the connection to projective temporal ordering.
+    Sections~\ref{sec:discussion} and~\ref{sec:conclusion} summarise the logical structure.
+
+  \section{Inertial splittings and capacity load}
+    \label{sec:splittings}
+
+    Let $\Meff$ be the homogeneous effective spacetime reconstructed from the admissibility
+    operator.
+    The Q5b--Q11 closure gives the completed effective co-metric
+    \[
+      g^{\mu\nu} = 2\eta^{\mu\nu},
+      \qquad
+      \eta = \mathrm{diag}(-1,+1,+1,+1),
+    \]
+    with no free parameter~\cite{Beau2026q5b,Beau2026q11}.
+    The corresponding metric is $g_{\mu\nu} = \tfrac{1}{2}\eta_{\mu\nu}$.
+    The isometry group of $g$ is $\SO(3,1)$, the same as that of $\eta$.
+
+    \begin{definition}[Inertial splitting]
+      \label{def:inertial-splitting}
+      An inertial observer is a future-directed unit timelike vector $u \in T_x\Meff$
+      satisfying $\eta(u,u) = -1$, together with its orthogonal simultaneity hyperplane
+      \[
+        \Sigma_u := \bigl\{ X \in T_x\Meff \mid \eta(X,u) = 0 \bigr\}.
+      \]
+    \end{definition}
+
+    \begin{remark}[Capacity sphere versus Lorentzian structure]
+      \label{rem:bi-vs-lorentz}
+      The Born--Infeld capacity sphere $(F^\tau)^2 + \beta^2 = 1$ is a Euclidean norm
+      constraint on the capacity flow vector, not a Lorentzian structure.
+      It provides the values of $\beta$ and $1/\gamma$ from projective data, but it does not
+      determine the Lorentzian interval.
+      The Lorentzian interval is supplied by $\eta$ from the Q5b--Q11 geometric
+      closure~\cite{Beau2026q5b,Beau2026q11}.
+      The Lorentz group acts as isometries of $\eta$; it does not act as isometries of the
+      BI sphere.
+    \end{remark}
+
+    The rest observer corresponds to the splitting $u_0 = \partial_\tau$.
+    An observer with normalised spatial capacity load $\beta$ in the $x$-direction has
+    splitting
+    \[
+      u_\beta = \gamma(\partial_\tau + \beta\,\partial_x),
+      \qquad
+      \gamma := \frac{1}{\sqrt{1-\beta^2}}.
+    \]
+    One verifies directly that $u_\beta$ is unit timelike:
+    $\eta(u_\beta, u_\beta) = -\gamma^2 + \gamma^2\beta^2 = -1$.
+
+    The parameter $\beta$ is not introduced independently.
+    By the Lorentz-capacity result of~\cite{Beau2026n,Beau2026tp}, the projective temporal
+    capacity satisfies
+    \[
+      F^\tau = \sqrt{1-\beta^2} = \frac{1}{\gamma},
+    \]
+    so the rapidity of the inertial splitting is determined by the projective temporal
+    capacity already computed in~\cite{Beau2026tp}.
+
+  \section{Boost reconstruction}
+    \label{sec:boost}
+
+    Let $\xi$ be the rapidity defined by
+    \[
+      \beta = \tanh\xi, \qquad \gamma = \cosh\xi, \qquad \gamma\beta = \sinh\xi.
+    \]
+    Then $u_\beta = \cosh\xi\,\partial_\tau + \sinh\xi\,\partial_x$.
+
+    \begin{lemma}[Uniqueness of the inertial boost]
+      \label{lem:boost-uniqueness}
+      There is a unique proper orthochronous linear isometry of $(T_x\Meff, \eta)$ that
+      maps $u_0 = \partial_\tau$ to $u_\beta$ and acts as the identity on the transverse
+      directions $\partial_y, \partial_z$.
+      It is the Lorentz boost of rapidity $\xi$, acting on the $(\tau,x)$-plane by
+      \[
+        \begin{pmatrix} \partial_{\tau'} \\ \partial_{x'} \end{pmatrix}
+        =
+        \begin{pmatrix} \cosh\xi & \sinh\xi \\ \sinh\xi & \cosh\xi \end{pmatrix}
+        \begin{pmatrix} \partial_\tau \\ \partial_x \end{pmatrix}.
+      \]
+    \end{lemma}
+
+    \begin{proof}
+      A proper orthochronous linear isometry of $\eta$ preserving $\partial_y$ and
+      $\partial_z$ acts only on the $(\tau,x)$-plane.
+      Preservation of the restriction $-d\tau^2 + dx^2$ requires a hyperbolic rotation:
+      the isometry is of the form displayed above for some $\xi$.
+      The condition $\partial_{\tau'} = u_\beta$ uniquely fixes
+      $\cosh\xi = \gamma$ and $\sinh\xi = \gamma\beta$,
+      hence $\xi = \mathrm{arctanh}\,\beta$.
+    \end{proof}
+
+    In coordinate form the boost reads
+    \[
+      \tau' = \gamma(\tau - \beta x), \qquad
+      x'   = \gamma(x  - \beta\tau), \qquad
+      y'   = y,                      \qquad
+      z'   = z.
+    \]
+
+    \begin{theorem}[Lorentz transformations from projective temporal ordering]
+      \label{thm:lorentz-from-pto}
+      Given a projective temporal capacity load $\beta$ determined by~\cite{Beau2026n,Beau2026tp},
+      the unique proper orthochronous transformation between the corresponding inertial
+      splittings is the Lorentz boost
+      \[
+        \tau' = \gamma(\tau - \beta x),\qquad
+        x'   = \gamma(x  - \beta\tau),\qquad
+        y'   = y,\qquad z' = z,
+      \]
+      with $\gamma = (1-\beta^2)^{-1/2}$.
+    \end{theorem}
+
+    \begin{proof}
+      The projective temporal capacity result of~\cite{Beau2026n,Beau2026tp} gives
+      $F^\tau = (1-\beta^2)^{1/2} = 1/\gamma$, fixing $\beta$ and hence $\xi$.
+      The Q5b--Q11 closure gives the effective co-metric $g^{\mu\nu} = 2\eta^{\mu\nu}$.
+      Since the factor $2$ is a global conformal rescaling, the isometry group of $g$ is
+      $\SO(3,1)$, the isometry group of $\eta$.
+      By Lemma~\ref{lem:boost-uniqueness}, the unique proper orthochronous isometry of $\eta$
+      mapping $\partial_\tau$ to $u_\beta$ and fixing the transverse directions is the
+      displayed Lorentz boost.
+    \end{proof}
+
+  \section{Length contraction}
+    \label{sec:contraction}
+
+    \begin{corollary}[Length contraction]
+      \label{cor:length-contraction}
+      A rod of proper length $\ell_0$ at rest in the unprimed splitting has length
+      $\ell = \ell_0/\gamma$ when measured on the simultaneity hyperplane of the primed
+      splitting.
+    \end{corollary}
+
+    \begin{proof}
+      Let the rod endpoints in the rest frame be $A = (\tau_A, x_A)$ and
+      $B = (\tau_B, x_B)$ with $\Delta x = x_B - x_A = \ell_0$.
+      The moving observer measures length at equal primed time, $\Delta\tau' = 0$.
+      The boost gives $\Delta\tau' = \gamma(\Delta\tau - \beta\Delta x)$,
+      so simultaneous in the primed frame means $\Delta\tau = \beta\Delta x$.
+      The primed spatial separation is then
+      \[
+        \Delta x'
+        = \gamma(\Delta x - \beta\Delta\tau)
+        = \gamma(1-\beta^2)\Delta x
+        = \frac{\Delta x}{\gamma}
+        = \frac{\ell_0}{\gamma}.
+      \]
+    \end{proof}
+
+  \section{Connection to projective temporal ordering}
+    \label{sec:pto}
+
+    The projective temporal ordering observable~\cite{Beau2026pto} supplies the scalar
+    clock factor
+    \[
+      \frac{d\tau}{dn} = F^\tau = \frac{1}{\gamma}.
+    \]
+    LC-O1 shows that this factor is not an isolated time-dilation effect.
+    Once the effective Lorentzian interval is reconstructed, the same capacity load $\beta$
+    determines the rapidity $\xi = \mathrm{arctanh}\,\beta$ and hence the complete inertial
+    transformation.
+
+    Projective temporal ordering determines the clock axis of the observer.
+    Q5b--Q11 determine the Lorentzian interval on which this axis lives.
+    The boost is the unique interval-preserving change of admissible inertial splitting.
+
+  \section{Discussion}
+    \label{sec:discussion}
+
+    The construction separates three layers, each with a distinct source.
+
+    \textit{Layer 1: Born--Infeld capacity sphere.}
+    The bounded BI admissibility budget of~\cite{Beau2026c} gives the unit capacity
+    relation
+    \[
+      (F^\tau)^2 + \beta^2 = 1.
+    \]
+    This is a Euclidean norm constraint on the capacity flow vector.
+    It is not the Minkowski interval.
+    It provides $\beta$ and $1/\gamma$ from projective data.
+
+    \textit{Layer 2: Effective Lorentzian co-metric.}
+    The homogeneous geometric closure of Q5b--Q11~\cite{Beau2026q5b,Beau2026q11}
+    gives the effective co-metric
+    \[
+      g^{\mu\nu} = 2\eta^{\mu\nu}.
+    \]
+    This supplies the interval whose isometry group is $\SO(3,1)$.
+    The global factor $2$ is physically irrelevant for the isometry group.
+
+    \textit{Layer 3: Inertial observer and boost.}
+    An inertial observer is a unit timelike splitting of $\eta$.
+    The rapidity of a splitting is fixed by the projective capacity load $\beta$ from
+    Layer~1.
+    The Lorentz boost is the unique isometry of $\eta$ (Layer~2) that maps one admissible
+    splitting to another at capacity load $\beta$.
+
+    Length contraction is a consequence of this boost, not an independent capacity law.
+    It follows from the difference in simultaneity hyperplanes between two inertial
+    splittings, given the interval structure of Layer~2.
+
+    \begin{remark}[Logical status]
+      \label{rem:logical-status}
+      All inputs are previously closed: time dilation and $F^\tau = 1/\gamma$
+      in~\cite{Beau2026n,Beau2026tp}; the effective co-metric $g^{\mu\nu} = 2\eta^{\mu\nu}$
+      in~\cite{Beau2026q5b,Beau2026q11}; the BI admissibility budget
+      in~\cite{Beau2026c,Beau2026m}.
+      LC-O1 adds only the identification of inertial observers with unit timelike splittings
+      and the application of the standard uniqueness of isometries of $\eta$ in each rapidity
+      class.
+      No new spectral or projective hypothesis is introduced.
+    \end{remark}
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    LC-O1 is closed.
+    Projective temporal ordering data determine the capacity load $\beta$ and the residual
+    $F^\tau = 1/\gamma$.
+    The Q5b--Q11 closure supplies the flat effective Lorentzian interval with isometry
+    group $\SO(3,1)$.
+    An inertial observer is a unit timelike splitting of this interval; changing observer is
+    changing the splitting while preserving the interval.
+    The unique proper orthochronous isometry at capacity load $\beta$ is the Lorentz boost:
+    \[
+      \tau' = \gamma(\tau - \beta x), \qquad
+      x'   = \gamma(x  - \beta\tau).
+    \]
+    Consequently, a rest length $\ell_0$ is measured as $\ell = \ell_0/\gamma$.
+
+    The full Lorentz transformation, including length contraction, is thereby reconstructed
+    from projective temporal ordering data and the effective metric normalisation.
+    The Born--Infeld capacity sphere provides $\beta$ and $\gamma$;
+    it is not the Minkowski interval and does not carry the Lorentz group as an isometry.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}
