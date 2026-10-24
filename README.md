@@ -15,15 +15,15 @@ identifications stated there, the projective temporal capacity
 
 $$F^\tau = \sqrt{1-\beta^2} = \frac{1}{\gamma}.$$
 
-The problem LC-O1, stated in Section 7.2 of `Beau2026tp`, is the reconstruction of the full effective
+The problem LC-O1, listed in Section 7.2 of `Beau2026tp`, is the reconstruction of the full effective
 observer transformation between inertial observers, including length contraction. The present paper
 closes it conditionally on a supplied co-metric and on the hypothesis [H-cone].
 
 ## Main Result
 
-Given two inertial observers with relative normalised capacity load $\beta$,
-the unique proper orthochronous isometry of the reconstructed flat effective
-interval mapping one temporal axis to the other is the standard Lorentz boost
+Under a supplied co-metric and [H-cone], given two inertial observers with relative normalised capacity load
+$\beta$, the unique proper orthochronous isometry of the tangent interval mapping one temporal axis to the other and
+fixing the transverse directions is the standard Lorentz boost (a statement on the tangent space)
 
 $$\tau' = \gamma(\tau - \beta x),\qquad
   x' = \gamma(x - \beta\tau),\qquad
@@ -49,7 +49,7 @@ The argument rests on a strict separation of three structural layers, each with 
    co-metric equals the Born-Infeld bound per ordering step; the coupling datum that Q11 leaves open), the
    rapidity is fixed by the capacity load via $\xi = \mathrm{arctanh}\,\beta$, and the
    Lorentz boost is the unique proper orthochronous isometry of $\eta$ mapping
-   one admissible splitting to another at that load.
+   one admissible splitting to another at that load and fixing the transverse directions.
 
 Length contraction is then a direct corollary of the boost: the difference in
 simultaneity hyperplanes between two inertial splittings, given the interval
@@ -91,8 +91,8 @@ LorCap -> TempProj -> LC-O2 -> LC-O2-O1
 | Paper | Role |
 |-------|------|
 | N (`Beau2026n`) | Lorentz factor from projective capacity saturation |
-| TempProj (`Beau2026tp`) | Temporal residual map; statement of LC-O1 (Section 7.2) |
-| PTO (`Beau2026pto`) | Projective temporal ordering observable; scalar clock factor $d\tau/dn$ |
+| TempProj (`Beau2026tp`) | Temporal residual map; LC-O1 listed in Section 7.2 |
+| PTO (`Beau2026pto`) | Projective temporal ordering observable; a monotone ordering proxy, with no step and no coefficient |
 | Q5b (`Beau2026q5b`) | Rank-three co-metric under [H-L] and [H-lift]; rank-four extension open |
 | Q8 (`BeauQ8`) | $A_H = A_Z = 2\lambda$ with $\lambda$ free, for a supplied invariant form |
 | Q10 (`Beau2026q10`) | No coefficient value derived |

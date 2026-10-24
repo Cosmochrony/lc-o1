@@ -32,28 +32,25 @@
     We address LC-O1, the reconstruction of effective Lorentz transformations between
     inertial observers from projective temporal ordering data, and close it conditionally on a supplied co-metric
     and on one named hypothesis.
-    Under a quadratic Born--Infeld budget hypothesis and their stated identifications, LorCap and TempProj give the
-    projective temporal capacity $F^\tau = \sqrt{1-\beta^2} = 1/\gamma$, where $\beta$ is the normalised spatial
-    capacity load.
-    No source constructs the Lorentzian co-metric needed for the full observer transformation; we take a supplied
-    rank-four co-metric of the conditional form of Q11,
-    $\mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$, whose two coefficients are independent and fixed by
-    no source; after a rescaling of the ordering coordinate it is proportional to the Minkowski form $\eta$, and the
-    normalisation $g^{\mu\nu}=2\eta^{\mu\nu}$ is a choice of units.
+    Under a quadratic Born--Infeld budget hypothesis, LorCap and TempProj give $F^\tau = \sqrt{1-\beta^2} = 1/\gamma$
+    for the normalised spatial capacity load $\beta$.
+    No source constructs the needed Lorentzian co-metric; we take a supplied co-metric of the conditional form of
+    Q11, $\mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$ with two independent coefficients, proportional to
+    the Minkowski form $\eta$ after rescaling the ordering coordinate; $g^{\mu\nu}=2\eta^{\mu\nu}$ is a choice of
+    units.
     Identifying the capacity load with the velocity of an inertial observer, a unit timelike splitting of $\eta$,
     requires a named hypothesis, [H-cone]: the
     light-cone speed of the co-metric equals the Born--Infeld bound per ordering step.
-    This is the coupling datum between temporal and spatial normalisations that Q11 leaves open, and it is not
-    derived here.
+    It is the coupling datum that Q11 leaves open, and it is not derived here.
     Under it, given two splittings with relative capacity load $\beta$, the unique proper
-    orthochronous isometry of the flat interval that maps one temporal axis
-    to the other is the standard Lorentz boost $\Lambda(\beta)$, with $\tau' = \gamma(\tau - \beta x)$ and
-    $x' = \gamma(x - \beta\tau)$, and length contraction $\ell = \ell_0/\gamma$ follows on the simultaneity
+    orthochronous isometry of the tangent interval that maps one temporal axis
+    to the other and fixes the transverse directions is the standard Lorentz boost $\Lambda(\beta)$, and length
+    contraction $\ell = \ell_0/\gamma$ follows on the simultaneity
     hyperplane of the moving splitting.
     The boost and contraction formulae are proved for $\eta$; their reading as the observer transformations of the
     capacity data is conditional on the supplied co-metric and on [H-cone].
   \end{abstract}
-  \enlargethispage{3\baselineskip}
+  \enlargethispage{1\baselineskip}
 
   \medskip
   \noindent\textbf{Keywords.}
@@ -77,10 +74,11 @@
     \]
     is the unique positive function compatible with the Lorentzian splitting of a supplied co-metric, the
     Born--Infeld unit capacity sphere, and the Weil filling law, under the hypotheses stated there.
-    Under [H-cone] (Section~\ref{sec:splittings}) this gives time dilation ($d\tau/dn = 1/\gamma$) and the light
+    Under [H-cone] (Section~\ref{sec:splittings}) this gives time dilation (the proper time of an observer at load
+    $\beta$ advances at the rate $1/\gamma$ relative to the rescaled ordering coordinate) and the light
     cone ($B = 1 \Rightarrow F^\tau = 0$).
 
-    The open problem LC-O1 is stated in Section~7.2 of~\cite{Beau2026tp}:
+    The open problem LC-O1 is listed in Section~7.2 of~\cite{Beau2026tp}:
     length contraction requires the reconstruction of effective Lorentz transformations
     between inertial observers from projective temporal ordering data.
 
@@ -101,7 +99,7 @@
     Section~\ref{sec:splittings} defines inertial observers as unit timelike splittings of
     the effective metric and identifies the rapidity with the projective capacity load.
     Section~\ref{sec:boost} proves that the unique interval-preserving isometry mapping
-    one splitting to another is the Lorentz boost.
+    one splitting to another and fixing the transverse directions is the Lorentz boost.
     Section~\ref{sec:contraction} derives length contraction.
     Section~\ref{sec:pto} states the connection to projective temporal ordering.
     Sections~\ref{sec:discussion} and~\ref{sec:conclusion} summarise the logical structure.
@@ -218,21 +216,25 @@
       hence $\xi = \mathrm{arctanh}\,\beta$.
     \end{proof}
 
-    In coordinate form the boost reads
+    In linear coordinates on $T_x\Meff$ adapted to the frame, the boost reads
     \[
       \tau' = \gamma(\tau - \beta x), \qquad
       x'   = \gamma(x  - \beta\tau), \qquad
       y'   = y,                      \qquad
       z'   = z.
     \]
+    These are statements on the tangent space $T_x\Meff$.
+    A constant co-metric in the left-invariant frame of $\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$ is not
+    flat, so reading the boost as a global change of inertial coordinates would require a supplied flat model, which
+    is not constructed here.
 
     \begin{theorem}[Lorentz transformations from projective temporal ordering]
       \label{thm:lorentz-from-pto}
       Assume a supplied co-metric of the form of Q11 Corollary~6.1, written in the rescaled coordinate $\tau$, and
       \textup{[H-cone]}.
       Given a projective temporal capacity load $\beta$ determined by~\cite{Beau2026n,Beau2026tp},
-      the unique proper orthochronous transformation between the corresponding inertial
-      splittings is the Lorentz boost
+      the unique proper orthochronous linear transformation of $T_x\Meff$ between the corresponding inertial
+      splittings that fixes the transverse directions is the Lorentz boost
       \[
         \tau' = \gamma(\tau - \beta x),\qquad
         x'   = \gamma(x  - \beta\tau),\qquad
@@ -282,11 +284,10 @@
   \section{Connection to projective temporal ordering}
     \label{sec:pto}
 
-    The projective temporal ordering observable~\cite{Beau2026pto} supplies the scalar
-    clock factor
-    \[
-      \frac{d\tau}{dn} = F^\tau = \frac{1}{\gamma}.
-    \]
+    The projective temporal ordering observable~\cite{Beau2026pto} supplies a monotone ordering proxy; it supplies no
+    step and no coefficient.
+    The clock-factor reading $F^\tau = 1/\gamma$ is that of TempProj~\cite{Beau2026tp}, as a proper-time rate
+    under [H-cone].
     LC-O1 shows that this factor is not an isolated time-dilation effect.
     Once an effective Lorentzian interval is supplied and [H-cone] is assumed, the same capacity load $\beta$
     determines the rapidity $\xi = \mathrm{arctanh}\,\beta$ and hence the complete inertial
@@ -295,7 +296,8 @@
     Projective temporal ordering determines the clock axis of the observer.
     A supplied co-metric of the conditional form of Q11, rescaled in $\tau$, gives the Lorentzian interval on which
     this axis lives, and [H-cone] places the capacity load on its light cone scale.
-    The boost is the unique interval-preserving change of admissible inertial splitting.
+    The boost is the unique interval-preserving change of admissible inertial splitting that fixes the transverse
+    directions.
 
   \section{Discussion}
     \label{sec:discussion}
@@ -329,7 +331,7 @@
     Under [H-cone], the rapidity of a splitting is fixed by the projective capacity load $\beta$ from
     Layer~1.
     The Lorentz boost is the unique isometry of $\eta$ (Layer~2) that maps one admissible
-    splitting to another at capacity load $\beta$.
+    splitting to another at capacity load $\beta$ and fixes the transverse directions.
 
     Length contraction is a consequence of this boost, not an independent capacity law.
     It follows from the difference in simultaneity hyperplanes between two inertial
@@ -355,12 +357,13 @@
     LC-O1 is closed conditionally.
     Projective temporal ordering data determine the capacity load $\beta$ and the residual
     $F^\tau = 1/\gamma$.
-    A supplied co-metric of the conditional form of Q11, rescaled in $\tau$, gives the flat effective Lorentzian
+    A supplied co-metric of the conditional form of Q11, rescaled in $\tau$, gives on each tangent space a Lorentzian
     interval with isometry group $\SO(3,1)$; its two coefficients are independent and fixed by no source.
     [H-cone] identifies the capacity load with the velocity of an inertial splitting.
     An inertial observer is a unit timelike splitting of this interval; changing observer is
     changing the splitting while preserving the interval.
-    The unique proper orthochronous isometry at capacity load $\beta$ is the Lorentz boost:
+    The unique proper orthochronous isometry at capacity load $\beta$ fixing the transverse directions is the Lorentz
+    boost:
     \[
       \tau' = \gamma(\tau - \beta x), \qquad
       x'   = \gamma(x  - \beta\tau).
