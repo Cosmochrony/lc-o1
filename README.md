@@ -7,19 +7,17 @@ This repository contains the source of the paper
 
 ## Overview
 
-The Lorentz-capacity programme derives relativistic kinematics from the bounded
+The Lorentz-capacity programme studies relativistic kinematics from the bounded
 Born-Infeld capacity budget of admissible projection on
 $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$. The technical note
-`Beau2026n` and the temporal residual paper `Beau2026tp` established that the
-projective temporal capacity satisfies
+`Beau2026n` and the temporal residual paper `Beau2026tp` give, under a quadratic budget hypothesis and the
+identifications stated there, the projective temporal capacity
 
-$$F^\tau = \sqrt{1-\beta^2} = \frac{1}{\gamma},$$
+$$F^\tau = \sqrt{1-\beta^2} = \frac{1}{\gamma}.$$
 
-closing time dilation ($d\tau/dn = 1/\gamma$) and the light cone
-($\beta = 1 \Rightarrow F^\tau = 0$). The remaining open problem, stated in
-Section 7.2 of `Beau2026tp`, is the reconstruction of the full effective
-observer transformation between inertial observers, including length
-contraction. The present paper closes this open problem (LC-O1).
+The problem LC-O1, stated in Section 7.2 of `Beau2026tp`, is the reconstruction of the full effective
+observer transformation between inertial observers, including length contraction. The present paper
+closes it conditionally on a supplied co-metric and on the hypothesis [H-cone].
 
 ## Main Result
 
@@ -37,18 +35,19 @@ splitting:
 
 $$\ell = \frac{\ell_0}{\gamma}.$$
 
-The argument rests on a strict separation of three structural layers, each
-imported from a previously closed result:
+The argument rests on a strict separation of three structural layers, each with a stated status:
 
-1. **Born-Infeld capacity sphere** (`Beau2026c`, `Beau2026m`): the Euclidean
+1. **Born-Infeld capacity sphere** (`Beau2026n`, expressing the bound [A-cap] of `Beau2026c`): the Euclidean
    capacity constraint $(F^\tau)^2 + \beta^2 = 1$ supplies $\beta$ and
    $1/\gamma$ from projective data. It is *not* the Minkowski interval.
-2. **Effective Lorentzian co-metric** (`Beau2026q5b`, `Beau2026q11`): the
-   homogeneous Q5b/Q11 closure gives the completed effective co-metric
-   $g^{\mu\nu} = 2\,\eta^{\mu\nu}$, whose isometry group is $\mathrm{SO}(3,1)$.
+2. **Effective Lorentzian co-metric** (supplied, of the form of `Beau2026q11` Corollary 6.1):
+   $g^{\mu\nu} = \mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$ with $A_\tau$ and $\lambda$
+   independent and fixed by no source. After a rescaling of $\tau$ it is proportional to $\eta$, whose
+   isometry group is $\mathrm{SO}(3,1)$; the normalisation $g^{\mu\nu} = 2\,\eta^{\mu\nu}$ is a choice of units.
 3. **Inertial observer and boost**: an inertial observer is identified with a
-   future-directed unit timelike splitting $u$ of $\eta$. The rapidity is
-   fixed by the capacity load via $\xi = \mathrm{arctanh}\,\beta$, and the
+   future-directed unit timelike splitting $u$ of $\eta$. Under **[H-cone]** (the light-cone speed of the
+   co-metric equals the Born-Infeld bound per ordering step; the coupling datum that Q11 leaves open), the
+   rapidity is fixed by the capacity load via $\xi = \mathrm{arctanh}\,\beta$, and the
    Lorentz boost is the unique proper orthochronous isometry of $\eta$ mapping
    one admissible splitting to another at that load.
 
@@ -58,10 +57,9 @@ structure of Layer 2, produces the standard $\ell = \ell_0/\gamma$ relation.
 
 ## Key features
 
-- **No new spectral or projective hypothesis.** All inputs are previously
-  closed; LC-O1 only identifies inertial observers with unit timelike
-  splittings and applies the standard uniqueness of isometries of $\eta$ in
-  each rapidity class.
+- **One named kinematic hypothesis.** The inputs are conditional (supplied co-metric, quadratic budget,
+  identifications of `Beau2026tp`); LC-O1 identifies inertial observers with unit timelike splittings, names
+  [H-cone], and applies the standard uniqueness of isometries of $\eta$ in each rapidity class.
 - **Strict layer separation.** The Born-Infeld capacity sphere is not a
   Lorentzian structure; the Lorentz group acts as the isometry group of
   $\eta$, not of the BI sphere. The BI sphere determines which splittings are
@@ -69,18 +67,17 @@ structure of Layer 2, produces the standard $\ell = \ell_0/\gamma$ relation.
 - **Length contraction as derived corollary.** It is a consequence of the
   boost and the simultaneity hyperplane geometry, not an independent capacity
   law.
-- **Closure of LC-O1.** The full effective observer transformation, including
-  length contraction, is reconstructed from projective temporal ordering data
-  and the effective metric normalisation.
+- **Conditional closure of LC-O1.** The full effective observer transformation, including
+  length contraction, is reconstructed from projective temporal ordering data, a supplied co-metric and
+  [H-cone].
 
 ## Status
 
-- Inertial splitting and rapidity identification: **proved**
-- Uniqueness of the inertial boost (Lemma): **proved**
-- Lorentz transformations from projective temporal ordering (Theorem):
-  **proved**
-- Length contraction (Corollary): **proved**
-- Closure of LC-O1: **proved**
+- Uniqueness of the inertial boost (Lemma): **proved** for $\eta$
+- Lorentz transformations from projective temporal ordering (Theorem): **proved** under a supplied co-metric
+  of the form of Q11 Corollary 6.1 and [H-cone]
+- Length contraction (Corollary): **proved** under the same hypotheses
+- [H-cone]: **hypothesis**, not derived (Q11-O1)
 
 ## Position in the sub-programme
 
@@ -96,9 +93,11 @@ LorCap -> TempProj -> LC-O2 -> LC-O2-O1
 | N (`Beau2026n`) | Lorentz factor from projective capacity saturation |
 | TempProj (`Beau2026tp`) | Temporal residual map; statement of LC-O1 (Section 7.2) |
 | PTO (`Beau2026pto`) | Projective temporal ordering observable; scalar clock factor $d\tau/dn$ |
-| Q5b (`Beau2026q5b`) | BFS shell stratification; emergence of the effective Lorentzian metric |
-| Q11 (`Beau2026q11`) | Closure of the effective co-metric $g^{\mu\nu} = 2\,\eta^{\mu\nu}$ |
-| C (`Beau2026c`) | Born-Infeld admissibility budget (Layer 1) |
+| Q5b (`Beau2026q5b`) | Rank-three co-metric under [H-L] and [H-lift]; rank-four extension open |
+| Q8 (`BeauQ8`) | $A_H = A_Z = 2\lambda$ with $\lambda$ free, for a supplied invariant form |
+| Q10 (`Beau2026q10`) | No coefficient value derived |
+| Q11 (`Beau2026q11`) | Conditional form $\mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$; coupling datum open |
+| C (`Beau2026c`) | Capacity bound [A-cap] (Layer 1) |
 | M (`Beau2026m`) | Admissible non-injective transitions as the primitive of physical description |
 
 ## Repository Contents
