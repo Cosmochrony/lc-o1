@@ -4,5 +4,6 @@
   "main_tex": "tex/lc-o1.tex",
   "publication_type": "workingpaper",
   "zenodo_id": 20334068,
-  "doi": "10.5281/zenodo.20334068"
+  "doi": "10.5281/zenodo.20334068",
+  "notes": "Version 1.2 aligns the summary of TempProj with TempProj 1.5: the Born-Infeld sphere and the Weil filling law fix the temporal residual at the attained values, the splitting identifies it as temporal without selecting it, and the light cone B = 1 is reached by the exact torus load of LC-O3, outside the window n <= (q-1)/2 of TempProj; the Lorentzian reading uses the signature. Theorem numbers are unchanged."
 }
