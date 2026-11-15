@@ -37,8 +37,8 @@ $$\ell = \frac{\ell_0}{\gamma}.$$
 
 The argument rests on a strict separation of three structural layers, each with a stated status:
 
-1. **Born-Infeld capacity sphere** (`Beau2026n`, expressing the bound [A-cap] of `Beau2026c`): the Euclidean
-   capacity constraint $(F^\tau)^2 + \beta^2 = 1$ supplies $\beta$ and
+1. **Born-Infeld capacity sphere** (a hypothesis of `Beau2026n`, motivated by the bound [A-cap] of `Beau2026c`,
+   not derived from it): the Euclidean capacity constraint $(F^\tau)^2 + \beta^2 = 1$ supplies $\beta$ and
    $1/\gamma$ from projective data. It is *not* the Minkowski interval.
 2. **Effective Lorentzian co-metric** (supplied, of the form of `Beau2026q11` Corollary 6.1):
    $g^{\mu\nu} = \mathrm{diag}(-A_\tau, 2\lambda, 2\lambda, 2\lambda)$ with $A_\tau$ and $\lambda$
